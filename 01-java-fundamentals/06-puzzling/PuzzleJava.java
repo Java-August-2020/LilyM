@@ -92,7 +92,7 @@ public class PuzzleJava {
       }    
       Collections.sort(rand10Array); 
       System.out.println(rand10Array);  //after sorting
-
+      //hard-code values for now
       System.out.println(rand10Array.get(0));  //smallest
       System.out.println(rand10Array.get(9)); //highest
     }
