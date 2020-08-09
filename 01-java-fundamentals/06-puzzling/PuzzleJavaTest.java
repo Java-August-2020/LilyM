@@ -22,6 +22,9 @@ public class PuzzleJavaTest {
 
         //Method#3,4,5 -
         iD.theAlphabet();   
+
+        //Method#5 -Random 10
+        iD.random10();   
        
     }
 }

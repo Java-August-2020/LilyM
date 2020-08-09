@@ -74,4 +74,29 @@ public class PuzzleJava {
       System.out.println("This is a random letter: " + alphabet.get(randomnum));
 
     }   
+
+    //Method#5 -Generate and return an array with 10 random numbers between 55-100 and have it be sorted
+    //(showing the smallest number in the beginning). Display all the numbers in the array.
+    //Next, display the minimum value in the array as well as the maximum value.
+    //To sort a collection, you can use the sort method of the Collections class.
+    public void random10() {
+      ArrayList<Integer> rand10Array = new ArrayList<Integer>();
+      int low = 55;
+      int high = 100;
+      Random r = new Random();
+
+      for (int i = 0; i < 10; i++) {
+          int onlyTen = r.nextInt(low) + (high-low); //between 55 -100
+          rand10Array.add(onlyTen);
+          System.out.println(onlyTen);  //before sorting
+      }    
+      Collections.sort(rand10Array); 
+      System.out.println(rand10Array);  //after sorting
+
+      System.out.println(rand10Array.get(0));  //smallest
+      System.out.println(rand10Array.get(9)); //highest
+    }
+
+
+
 }
