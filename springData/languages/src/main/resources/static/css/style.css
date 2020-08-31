@@ -1,0 +1,8 @@
+.form-group > span {
+	display: block;
+	color: Green;
+	font-weight: bold;
+}
+#delete-form {
+	display: inline-block;
+}

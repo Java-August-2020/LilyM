@@ -1,0 +1,16 @@
+
+nav * {
+	display: inline-block;
+}
+form span {
+	display: block;
+	font-weight: bold;
+	color: red;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10em;
+}

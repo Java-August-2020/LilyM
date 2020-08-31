@@ -1,0 +1,20 @@
+
+nav * {
+	display: inline-block;
+}
+form span {
+	display: block;
+	font-weight: bold;
+	color: red;
+}
+
+.centerme {
+	display: block;
+	text-align:center;
+}
+
+.showContainer{
+	display: block;
+	text-align:left;
+	left: 150px;
+}

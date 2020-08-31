@@ -1,0 +1,5 @@
+package com.Lily.lookify.repositories;
+
+public interface SongRepository {
+
+}

@@ -1,0 +1,23 @@
+INDEX VERSION 1.4+C:\Users\Lily\Desktop\JAVA_2020\LilyM-Assignments\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2172132190.index
+3647016779.index
+1695656806.index
+4175113427.index
+1895525943.index
+2172132190.index
+108677479.index
+2015545206.index
+315317942.index
+3081277774.index
+447153514.index
+338682866.index
+197969692.index
+801039480.index
+1810957043.index
+1016789096.index
+185624710.index
+1042948978.index
+2178987511.index
+3479971990.index
+3132181226.index
+921505689.index

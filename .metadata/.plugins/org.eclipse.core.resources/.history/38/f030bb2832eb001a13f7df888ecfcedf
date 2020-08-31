@@ -1,0 +1,15 @@
+
+nav * {
+	display: inline-block;
+}
+form span {
+	display: block;
+	font-weight: bold;
+	color: red;
+}
+
+.container {
+	display: block;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,25 @@
+package com.Lily.lookify.models;
+@Entity
+@Table(name= "lookify_songs")
+public class Song {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	@Size(min=5,max=40)
+	private String name;
+	@Size(min=5,max=40)
+	private String artist;
+	@Min(1)
+	@Max(10)
+	private int rating;
+	
+	public Song() {
+	}
+	
+	public Song(String name, String artist, int rating) {
+		this.name = name;
+		this.artist = artist;
+		this.rating = rating;
+	}
+
+}
