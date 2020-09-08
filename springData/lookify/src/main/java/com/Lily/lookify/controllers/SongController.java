@@ -61,6 +61,7 @@ public class SongController {
 		model.addAttribute("songs", songService.topTenByRating());
 		return "/songs/topTen.jsp";
 	}
+	//Search
 	@RequestMapping("/songs/search")
 	public String search(@RequestParam("artist") String artist, Model model) {
 		model.addAttribute("songs",	songService.songsByArtist(artist));

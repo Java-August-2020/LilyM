@@ -1,5 +1,0 @@
-package com.Lily.mvcSetup.repositories;
-
-public interface BookRepository {
-
-}

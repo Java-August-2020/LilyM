@@ -11,14 +11,15 @@
 </head>
 <body>
 	<div class="container">
-		<nav2>
-			<h3>Songs by Artist:  ${ artist }</h3>
+		
+		<p class="artist">Songs by Artist:  ${ artist }</p>
+		<div class= "nav2">
 		<form action="/songs/search" class="float-right">	
 				<input type="text" name="artist"/>
 				<button class="btn btn-primary">New Artist Search</button>
-			</form>
+		</form>
 				<a href="/songs">Dashboard</a>
-		</nav2>
+		</div>
 		<table class="table table-hover">
 			<thead>
 				<tr>
