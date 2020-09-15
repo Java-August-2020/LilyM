@@ -1,12 +1,13 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1594835793000
-codemix.dont.show.upsell.until=1599953986921
+codemix.dont.show.upsell.until=1599521986921
 configurationInstallLocation=/C\:/Users/Lily/Downloads/sts-4.7.1.RELEASE/
 eclipse.preferences.version=1
+elearning.dont.show.until=1600639808926
 iconcolormode=primary
 includeThemingInOomph=false
 last.download.attempt.time=1598044232574
-lastConfiguration=1599594206057
+lastConfiguration=1600122082706
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray

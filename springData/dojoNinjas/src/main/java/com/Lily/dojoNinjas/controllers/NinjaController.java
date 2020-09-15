@@ -23,30 +23,25 @@ public class NinjaController {
 	}
 	
 	//from back-end to front-end thru model (from database -findALL)
-			@RequestMapping("/ninjas/all")
-			public String index(Model model) {
-				model.addAttribute("ninjas", service.allNinjas());
-				return "/ninjas/indexNinjas.jsp";
-		}
-	
-	
-	//NINJA
+	@RequestMapping("/ninjas/all")
+	public String index(Model model) {
+	model.addAttribute("ninjas", service.allNinjas());
+	return "/ninjas/indexNinjas.jsp";
+	}	
+	//	CREATE
 	//from front-end to back-end thru @RequestParam -parms entered by user
-		@RequestMapping("/ninjas/new")
-		public String create(@ModelAttribute("ninja") Ninja ninja, Model model) {
+	@RequestMapping("/ninjas/new")
+	public String create(@ModelAttribute("ninja") Ninja ninja, Model model) {
+	model.addAttribute("dojos", this.service.allDojos());
+	return "/ninjas/newNinja.jsp";
+	}
+	@RequestMapping(value="/ninjas", method=RequestMethod.POST)
+	public String Create(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
+		if(result.hasErrors()) {
 			model.addAttribute("dojos", this.service.allDojos());
 			return "/ninjas/newNinja.jsp";
 		}
-		@RequestMapping(value="/ninjas", method=RequestMethod.POST)
-		public String Create(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
-			if(result.hasErrors()) {
-				model.addAttribute("dojos", this.service.allDojos());
-				return "/ninjas/newNinja.jsp";
-			}
 			this.service.createNinja(ninja);
 			return "redirect:/";
-		}
-		
-		
-	
+	}	
 }
