@@ -15,7 +15,8 @@ public class DogApiController {
 	private DogService dService;
 	public DogApiController(DogService service) {
 		this.dService = service;
-	}	
+	}
+	
 	// Routes	
 	@RequestMapping("/")
 	public List<Dog> index(){
@@ -37,10 +38,10 @@ public class DogApiController {
 		return this.dService.updateDog(id, updatedDog);
 	}
 	
-	@RequestMapping(value="/dog/delete/{id}", method=RequestMethod.DELETE)
+	@RequestMapping("/dog/delete/{id}")
 	public String removeDog(@PathVariable("id") Long id) {
-		this.dService.deleteDog(id);
+		this.dService.deletePet(id);
 		return id + " has been removed from the database";
 	}
-}
 	
+}

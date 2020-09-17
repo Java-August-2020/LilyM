@@ -1,13 +1,18 @@
 package com.Lily.dogs.services;
 
 import java.util.List;
+
 import org.springframework.stereotype.Service;
-import com.Lily.dogs.repositories.DogRepository;
+
 import com.Lily.dogs.models.Dog;
+import com.Lily.dogs.models.User;
+import com.Lily.dogs.repositories.DogRepository;
 
 @Service
 public class DogService {
 	private DogRepository dRepo;
+	
+	
 	public DogService(DogRepository repo) {
 		this.dRepo = repo;
 	}
@@ -21,19 +26,49 @@ public class DogService {
 	public Dog getOneDog(Long id) {
 		return this.dRepo.findById(id).orElse(null);
 	}
-	// createDog
+	// create Dog
 	public Dog createDog(Dog newDog) {
 		return this.dRepo.save(newDog);
 	}
 	
-	// updateDog
+	// Create Pet overloaded from the frotnend
+	public Dog createDog(String name, String breed, int age) {
+		Dog newDog = new Dog(name, breed, age);
+		return this.dRepo.save(newDog);
+	}
+	
+	// update Dog
 	public Dog updateDog(Long id, Dog updatedDog) {
 		return this.dRepo.save(updatedDog);
 	}
 	
-	// deleteDog
-	public void deleteDog(Long id) {
+	public Dog updateDog(Dog updatedDog) {
+		return this.dRepo.save(updatedDog);
+	}
+	
+	// delete Pet
+	public void deletePet(Long id) {
 		this.dRepo.deleteById(id);
 	}
-}
 	
+	// Add Liker to the list of User in the Dog Model
+	public void addLiker(User user, Dog dog) {
+		// get the ArrayList of Likers from the Dog Model
+		List<User> likers = dog.getLikers();
+		// Add the user that liked the dogs
+		likers.add(user);
+		// Update the DB
+		this.dRepo.save(dog);
+	}
+	
+	// Remove Liker from the list of Users in the Dog Model
+	public void removeLiker(User user, Dog dog) {
+		// Retrieve list of likers from specific dog
+		List<User> likers = dog.getLikers();
+		// Remove the user that likes the dog
+		likers.remove(user);
+		// Update the DV
+		this.dRepo.save(dog);
+	}
+	
+}

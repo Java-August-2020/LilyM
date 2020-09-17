@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.Lily.dojoOverflow.models.Answer;
 import com.Lily.dojoOverflow.models.NewQuestion;
@@ -46,6 +47,9 @@ public class QuestionController {
 		model.addAttribute("question", this.service.getQuestion(id));
 		return "show.jsp";
 	}
+	
+	
+	//try Reena's code
 	@PostMapping("/answers")
 	public String CreateAnswer(@Valid @ModelAttribute("ans") Answer ans,  BindingResult result) {
 //		public String CreateAnswer(@Valid @ModelAttribute("ans") Answer ans,  BindingResult result, @PathVariable("id") Long id) {
@@ -58,4 +62,6 @@ public class QuestionController {
 		Answer newAnswer = this.service.createAnswer(ans);
 		return "redirect:/" + newAnswer.getQuestion().getId();
 	}
+
+	
 }	

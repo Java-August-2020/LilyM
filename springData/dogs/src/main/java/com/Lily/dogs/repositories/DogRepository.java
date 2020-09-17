@@ -8,5 +8,5 @@ import com.Lily.dogs.models.Dog;
 @Repository
 public interface DogRepository extends CrudRepository<Dog, Long>{
 	List<Dog> findAll();
-//	List<Dog> findByBreed(String breed);
+    List<Dog> findByBreed(String breed);
 }
